@@ -5,14 +5,16 @@
     padding: 0;
 }
 
-/* Body */
-body {
+/* Main */
+#main {
+    width: 100vw;
+    height: 100vh;
+
     /* Configuration */
     background-color: var(--background-color);
     row-gap: var(--row-gap);
 
     /* Layout */
-    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(var(--rows), 1fr);

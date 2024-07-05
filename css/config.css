@@ -1,0 +1,10 @@
+body {
+    /* Colors */
+    --background-color: #f2f3f4;
+
+    /* Layout */
+    --rows: 4;
+    --row-gap: 0.5vw;
+    --parallel-gap: 2vw;
+    --parallel-margin: 0.5vw;
+}

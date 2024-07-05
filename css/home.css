@@ -1,0 +1,49 @@
+/* Standard */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    /* Configuration */
+    background-color: var(--background-color);
+    row-gap: var(--row-gap);
+
+    /* Layout */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--rows), 1fr);
+
+    /* Scrollbars */
+    overflow: hidden;
+    padding: var(--row-gap);
+}
+
+/* Row */
+.row {
+    /* Layout */
+    display: flex;
+}
+
+/* Image */
+.image {
+    /* Layout */
+    width: var(--width, 20vw);
+    clip-path: polygon(var(--parallel-gap) 0%, 100% 0%, calc(100% - var(--parallel-gap)) 100%, 0% 100%);
+    margin-left: calc(var(--parallel-margin) - var(--parallel-gap));
+
+    /* Image */
+    background-size: var(--width, 20vw);
+
+    /* Blur */
+    filter: blur(2px) opacity(50%);
+    transition: all 0.25s ease-out;
+}
+
+.image:hover {
+    filter: blur(0px) opacity(100%);
+    cursor: pointer;
+}

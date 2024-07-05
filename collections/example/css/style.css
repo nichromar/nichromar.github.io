@@ -1,0 +1,129 @@
+/* Standard */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    width: 0;
+}
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+    background-color: #f2f3f4;
+}
+
+/* Title */
+.title {
+    padding-top: 5vh;
+    width: 100%;
+    text-align: center;
+    font-family: 'Assistant';
+    font-weight: 700;
+    font-size: 7vh;
+}
+
+/* Grid */
+#grid {
+    /* Layout */
+    width: 100%;
+    padding: 10vw;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10vw;
+}
+
+/* Entry */
+.entry {
+    height: 50vh;
+}
+
+/* Image */
+.image{
+    height: 75%;
+    position: relative;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.portex > img {
+    object-fit: cover;
+}
+
+/* Text */
+.text{
+    margin-top: 0.4em;
+    font-family: 'Assistant';
+    font-size: 2vh;
+    height: 25%;
+}
+
+p {
+    padding-top: 0.3em;
+}
+
+/* Back Button Container */
+#backcont {
+    /* Layout */
+    width: 100%;
+    height: 8vh;
+    margin-bottom: 8vh;
+
+    /* Centering */
+    display: flex;
+    justify-content: center;
+}
+
+/* Back Button Exterior */
+#back {
+    /* Layout */
+    width: 8vh;
+    height: 8vh;
+
+    /* Centering */
+    position: relative;
+}
+
+/* Back Button Interior */
+#backint {
+    /* Centering */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    /* Object */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #444;
+    transition: 0.25s ease-out all;
+}
+
+/* Hover */
+#backint:hover {
+    cursor: pointer;
+    border: 3px solid #000;
+    width: 85%;
+    height: 85%;
+}
+
+/* Mobile */
+@media only screen and (max-width: 125vh) {
+    #grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

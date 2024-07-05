@@ -40,6 +40,7 @@ body {
 
     /* Blur */
     filter: blur(2px) opacity(50%);
+    will-change: filter;
     transition: all 0.25s ease-out;
 }
 

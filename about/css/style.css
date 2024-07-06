@@ -59,9 +59,10 @@ p {
     padding-top: 0.3em;
 }
 
-/* Back Button */
+/* Back */
 #backcont {
     grid-area: c;
+    margin-top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,16 +88,46 @@ p {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 3px solid #444;
     transition: 0.25s ease-out all;
 }
 
+/* X */
+#backint:before,#backint:after {
+    content:'';
+    position:absolute;
+    width: 95%;
+    height: 1px;
+    background-color:#444;
+    transition: 0.25s ease-out all;
+    top: 50%;
+}
+
+#backint:before{
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    transform:rotate(45deg);
+    left:2px;
+}
+#backint:after{
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+    right:2px;
+}
+
+/* Hover */
 #backint:hover {
     cursor: pointer;
-    border: 3px solid #000;
     width: 85%;
     height: 85%;
 }
+
+#backint:hover:before, #backint:hover:after {
+    height: 1.5px;
+    background-color: #000;
+    width: 94%;
+}
+
 
 /* Tags */
 .tags {

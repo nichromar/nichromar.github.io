@@ -38,7 +38,7 @@
     margin-left: calc(var(--parallel-margin) - var(--parallel-gap));
 
     /* Image */
-    background-size: var(--width, 20vw);
+    background-size: max(var(--width, 20vw), calc(var(--vertfix, 1) * 100 / var(--rows) * 1vh));
 
     /* Blur */
     filter: blur(2px) opacity(50%);
@@ -49,4 +49,11 @@
 .image:hover {
     filter: blur(0px) opacity(100%);
     cursor: pointer;
+}
+
+/* Mobile */
+@media only screen and (max-width: 125vh) {
+    .image {
+        background-size: max(var(--width, 20vw), calc(var(--vertfix, var(--mobilevertfix, 1)) * 100 / var(--rows) * 1vh));
+    }
 }

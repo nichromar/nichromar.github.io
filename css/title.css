@@ -17,11 +17,11 @@
 .name {
     /* Font */
     font-family: 'Assistant';
-    line-height: 6vw;
-    padding-bottom: 1vw;
+    line-height: clamp(5.4vh, 6vw, 54vh);
+    padding-bottom: clamp(1vh, 1vw, 10vh);
     letter-spacing: -0.2vw;
     font-weight: 800;
-    font-size: 10vw;
+    font-size: clamp(9vh, 10vw, 120vh);
 
     /* Other */
     pointer-events: all;
@@ -68,7 +68,24 @@
 /* Subtitle Sub-entries */
 .sub {
     font-family: 'Assistant';
-    letter-spacing: 0.1vw;
+    letter-spacing: clamp(0.1vh, 0.1vw, 1vh);
     font-weight: 600;
-    font-size: 1.2vw;
+    font-size: clamp(1.4vh, 1.2vw, 10vh);
+}
+
+/* Series */
+.series {
+    position: absolute;
+    font-family: 'Assistant';
+    letter-spacing: clamp(-1vh, -0.1vw, -0.1vh);
+    font-weight: 800;
+    font-size: clamp(4vh, 3.5vw, 30vh);
+    top: 2vh;
+    right: 2vh;
+    line-height: 3vw;
+}
+
+.series:hover {
+    cursor: pointer;
+    color: #444;
 }

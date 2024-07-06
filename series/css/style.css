@@ -5,6 +5,18 @@
     padding: 0;
 }
 
+/* Body */
+body {
+    padding: 5vh;
+    font-family: 'Assistant';
+    background-color: #f2f3f4;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 2vh;
+}
+
 /* Scrollbar */
 body::-webkit-scrollbar {
     width: 0;
@@ -15,64 +27,81 @@ body {
     background-color: #f2f3f4;
 }
 
+/* Series */
+.series {
+    width: 100%;
+    height: 20vh;
+    margin-bottom: 2vh;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "a c" "b c";
+}
+
 /* Title */
 .title {
-    padding-top: 5vh;
-    width: 100%;
-    text-align: center;
-    font-family: 'Assistant';
+    grid-area: a;
     font-weight: 700;
-    font-size: 7vh;
+    font-size: 3vh;
 }
 
-/* Grid */
-#grid {
-    /* Layout */
-    width: 100%;
-    padding: 10vw;
-    padding-top: 5vh;
-    padding-bottom: 2vh;
-
-    /* Grid */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 10px;
-    column-gap: 10vw;
-}
-
-/* Entry */
-.entry {
-    height: 50vh;
-}
-
-/* Image */
-.image{
-    height: 75%;
-    position: relative;
+.title > a {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
 }
 
+/* Text */
+.text {
+    grid-area: b;
+    padding-top: 0.5vh;
+}
+
+/* Images */
+.images {
+    position: relative;
+    grid-area: c;
+    overflow-x: scroll;
+    margin-bottom: -5vh;
+    /* overflow-y: hidden; */
+}
+
+/* Scrollbar */
+.images::-webkit-scrollbar {
+    width: 0;
+}
+.images {
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+    background-color: #f2f3f4;
+}
+
+.imagesint {
+    height: 20vh;
+    position: absolute;
+    display: flex;
+    gap: 0.5vw;
+}
+
+.scrollbar {
+    position: absolute;
+    z-index: 1;
+    background-color: #ffffff;
+    height: 6px;
+    width: 50%;
+    left: 2px;
+    bottom: calc(3vh + 2px);
+    border-radius: 3px;
+}
+
+.imcont {
+    height: 20vh;
+}
+
 img {
-    width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: bottom;
-}
-
-.portex > img {
-    object-fit: cover;
-}
-
-/* Text */
-.text{
-    margin-top: 0.4em;
-    font-family: 'Assistant';
-    font-size: 2vh;
-    height: 25%;
-}
-
-p {
-    padding-top: 0.3em;
+    cursor: pointer;
 }
 
 /* Back */
@@ -87,7 +116,6 @@ p {
     /* Layout */
     width: 6vh;
     height: 6vh;
-    margin-bottom: 6vh;
 
     /* Centering */
     position: relative;
@@ -146,7 +174,8 @@ p {
 
 /* Mobile */
 @media only screen and (max-width: 125vh) {
-    #grid {
-        grid-template-columns: repeat(2, 1fr);
+    .series {
+        grid-template-rows: 1fr 3fr;
+        grid-template-columns: 1fr 1fr;
     }
 }

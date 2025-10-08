@@ -23,7 +23,7 @@ body {
 }
 
 #total {
-    max-width: min(36rem, 90%);
+    max-width: min(40rem, 90%);
     margin: auto;
 }
 
@@ -36,6 +36,12 @@ body {
 #intro {
     margin-top: 4.05rem;
     margin-bottom: 1.55rem;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .entry {
@@ -47,7 +53,7 @@ body {
 }
 
 .painting {
-    grid-column: span 2;
+    grid-column: span 3;
 }
 
 .image {
@@ -98,7 +104,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    grid-column: span 3;
+    grid-column: span 2;
 }
 
 .text b {

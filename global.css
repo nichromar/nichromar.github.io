@@ -56,6 +56,14 @@ body {
     grid-column: span 3;
 }
 
+img {
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 .image {
     position: relative;
     top: 0;
